@@ -31,7 +31,7 @@ sudo wget https://dlcdn.apache.org/tomcat/tomcat-11/v11.0.0-M7/bin/apache-tomcat
 sudo unzip apache-tomcat-11.0.0-M7.zip
 sudo rm -rf apache-tomcat-11.0.0-M7.zip
 ### rename tomcat for good naming convention
-sudo mv apache-tomcat-11.0.0 tomcat11  
+sudo mv apache-tomcat-11.0.0-M7 tomcat11  
 ### assign executable permissions to the tomcat home directory
 sudo chmod 777 -R /opt/tomcat11
 sudo chown ec2-user -R /opt/tomcat11
