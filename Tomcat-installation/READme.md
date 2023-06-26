@@ -24,23 +24,23 @@ sudo yum install java-1.8.0-openjdk-devel -y
 # install wget unzip packages.
 sudo yum install wget unzip -y
 ```
-## Install Tomcat version 9.0.76
+## Install Tomcat version 11.0.0-M7
 ### Download and extract the tomcat server
 ``` sh
-sudo wget  https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.75/bin/apache-tomcat-9.0.76.zip
-sudo unzip apache-tomcat-9.0.76.zip
-sudo rm -rf apache-tomcat-9.0.76.zip
+sudo wget https://dlcdn.apache.org/tomcat/tomcat-11/v11.0.0-M7/bin/apache-tomcat-11.0.0-M7.zip
+sudo unzip apache-tomcat-11.0.0-M7.zip
+sudo rm -rf apache-tomcat-11.0.0-M7.zip
 ### rename tomcat for good naming convention
-sudo mv apache-tomcat-9.0.76 tomcat9  
+sudo mv apache-tomcat-11.0.0 tomcat11  
 ### assign executable permissions to the tomcat home directory
-sudo chmod 777 -R /opt/tomcat9
-sudo chown ec2-user -R /opt/tomcat9
+sudo chmod 777 -R /opt/tomcat11
+sudo chown ec2-user -R /opt/tomcat11
 ### start tomcat
-sh /opt/tomcat9/bin/startup.sh
+sh /opt/tomcat11/bin/startup.sh
 # create a soft link to start and stop tomcat
 # This will enable us to manage tomcat as a service
-sudo ln -s /opt/tomcat9/bin/startup.sh /usr/bin/starttomcat
-sudo ln -s /opt/tomcat9/bin/shutdown.sh /usr/bin/stoptomcat
+sudo ln -s /opt/tomcat11/bin/startup.sh /usr/bin/starttomcat
+sudo ln -s /opt/tomcat11/bin/shutdown.sh /usr/bin/stoptomcat
 starttomcat
 sudo su - ec2-user
 ```
